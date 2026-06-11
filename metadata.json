@@ -1,0 +1,6 @@
+{
+  "name": "Qnext",
+  "description": "Minimalist, modern corporate portfolio and career Hub for Qnext - a leading cross-border e-commerce enterprise.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
