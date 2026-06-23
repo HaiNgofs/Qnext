@@ -318,7 +318,7 @@ export const OFFICES: OfficeAddress[] = [
     country: 'Singapore',
     city: 'Singapore (HQ)',
     name: 'Qnext Pte. Ltd.',
-    address: '68 Circular Road, #02-01, Singapore (049422)',
+    address: '114 LAVENDER STREET #10-05 CT HUB 2 SINGAPORE 338729',
     email: 'hq@qnextgroup.com',
     phone: '+65 6712 9011',
     coordinates: { x: 35, y: 40 }

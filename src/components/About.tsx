@@ -6,7 +6,6 @@
 import React, { useState } from 'react';
 import { METRICS, OFFICES } from '../data';
 import { MapPin, Globe2, Sparkles, Building2, HelpCircle, ChevronRight } from 'lucide-react';
-import { motion } from 'motion/react';
 import aboutOfficeImage from '../assets/images/about_office_1780992247265.png';
 
 export default function About() {

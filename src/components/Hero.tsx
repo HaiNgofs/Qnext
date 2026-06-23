@@ -5,8 +5,6 @@
 
 import React, { useState } from 'react';
 import { ArrowDown, Flame, DollarSign, TrendingUp, Sparkles, CheckCircle2 } from 'lucide-react';
-import { motion } from 'motion/react';
-
 interface HeroProps {
   onLearnMore: () => void;
   onExploreCareers: () => void;

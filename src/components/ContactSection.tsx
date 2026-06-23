@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { PARTNERS, OFFICES } from '../data';
 import { Mail, Phone, MapPin, Send, CheckCircle2, ChevronRight, HelpCircle, ExternalLink, Trash2 } from 'lucide-react';
+import { safeStorage } from '../utils';
 
 export default function ContactSection() {
   const [partnerFilter, setPartnerFilter] = useState<'all' | 'ecommerce' | 'payment'>('all');
@@ -21,7 +22,7 @@ export default function ContactSection() {
   const [storedInquiries, setStoredInquiries] = useState<any[]>([]);
 
   useEffect(() => {
-    const saved = localStorage.getItem('qnext_inquiries');
+    const saved = safeStorage.getItem('qnext_inquiries');
     if (saved) {
       try {
         setStoredInquiries(JSON.parse(saved));
@@ -55,7 +56,7 @@ export default function ContactSection() {
 
       const updated = [newInquiry, ...storedInquiries];
       setStoredInquiries(updated);
-      localStorage.setItem('qnext_inquiries', JSON.stringify(updated));
+      safeStorage.setItem('qnext_inquiries', JSON.stringify(updated));
 
       setIsSending(false);
       setSuccessMsg(true);
@@ -72,7 +73,7 @@ export default function ContactSection() {
   const handleDeleteInquiry = (id: string) => {
     const updated = storedInquiries.filter(i => i.id !== id);
     setStoredInquiries(updated);
-    localStorage.setItem('qnext_inquiries', JSON.stringify(updated));
+    safeStorage.setItem('qnext_inquiries', JSON.stringify(updated));
   };
 
   const filteredPartners = partnerFilter === 'all' 

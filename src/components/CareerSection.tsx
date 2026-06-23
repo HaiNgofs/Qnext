@@ -8,6 +8,7 @@ import { JOB_POSITIONS } from '../data';
 import { JobPosition } from '../types';
 import { Briefcase, MapPin, DollarSign, Calendar, FileText, CheckCircle, Plus, ChevronDown, ChevronUp, X, Upload, Send, AlertCircle, Trash2 } from 'lucide-react';
 import careerTeamImg from '../assets/images/career_team_1780992385038.png';
+import { safeStorage } from '../utils';
 
 export default function CareerSection() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
@@ -31,7 +32,7 @@ export default function CareerSection() {
 
   // Load from local storage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('qnext_applications');
+    const saved = safeStorage.getItem('qnext_applications');
     if (saved) {
       try {
         setSubmittedApplications(JSON.parse(saved));
@@ -131,7 +132,7 @@ export default function CareerSection() {
 
       const updated = [newApp, ...submittedApplications];
       setSubmittedApplications(updated);
-      localStorage.setItem('qnext_applications', JSON.stringify(updated));
+      safeStorage.setItem('qnext_applications', JSON.stringify(updated));
 
       setIsSubmitting(false);
       clearForm();
@@ -141,7 +142,7 @@ export default function CareerSection() {
   const handleDeleteApplication = (id: string) => {
     const updated = submittedApplications.filter(app => app.id !== id);
     setSubmittedApplications(updated);
-    localStorage.setItem('qnext_applications', JSON.stringify(updated));
+    safeStorage.setItem('qnext_applications', JSON.stringify(updated));
   };
 
   return (

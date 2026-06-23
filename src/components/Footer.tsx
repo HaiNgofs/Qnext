@@ -82,7 +82,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <div className="space-y-1">
                 <span className="block text-white font-bold text-[11px] uppercase tracking-wider">Singapore (HQ)</span>
                 <span className="block text-[11px] text-zinc-500 font-mono leading-relaxed">
-                  Qnext Pte. Ltd. &bull; 68 Circular Road, #02-01, Singapore (049422)
+                  Qnext Pte. Ltd. &bull; 114 LAVENDER STREET #10-05 CT HUB 2 SINGAPORE 338729
                 </span>
               </div>
               <div className="space-y-1">
