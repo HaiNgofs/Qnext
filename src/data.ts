@@ -135,143 +135,7 @@ export const BUSINESS_AREAS: BusinessArea[] = [
   }
 ];
 
-export const JOB_POSITIONS: JobPosition[] = [
-  {
-    id: 'tiktok-seller',
-    title: 'TikTok Shop Seller (US Market)',
-    department: 'E-Commerce Operations',
-    location: 'Hanoi Branch (Gems Office)',
-    type: 'Full-time',
-    salary: '$800 - $1,500 + Commission',
-    description: 'We are seeking an active, trend-savvy TikTok Shop Operator to manage stores targeting the US Market. You will search for products, coordinate with listing applications, monitor analytics, and scale organic/paid store sales.',
-    responsibilities: [
-      'Daily store operations, listing optimization, catalog sorting, and inventory sync monitor.',
-      'Identify viral trends, popular products on TikTok, and competitor US store actions.',
-      'Initiate and manage thousands of collaborations with US TikTok creators and curators.',
-      'Coordinate closely with the customer service and R&D designers to keep high-class satisfaction values.'
-    ],
-    requirements: [
-      'Minimum of 1 year operating cross-border e-commerce or domestic Shopee/Lazada stores.',
-      'Good reading and basic writing skills in English (communicating with partners and managing tools).',
-      'High enthusiasm for TikTok trends, short videos, and the United States pop culture.',
-      'Outstanding numerical analytical skills using Excel/Google Sheets.'
-    ],
-    benefits: [
-      'Highly competitive base salary with milestone performance commissions.',
-      'Dedicated mentoring by seasoned cross-border sellers with multi-million dollar track records.',
-      'State-of-the-art workspace, dual monitor setups, and unlimited coffee/snacks.',
-      'Clear corporate path to operational partner/team lead.'
-    ]
-  },
-  {
-    id: 'marketing-ads',
-    title: 'Performance Marketing (Facebook & TikTok Ads)',
-    department: 'Paid Acquisition Team',
-    location: 'Hanoi Branch (Gems Office)',
-    type: 'Full-time',
-    salary: '$1,000 - $1,800 + Target Bonus',
-    description: 'Take charge of scaling our global cross-border acquisition funnels. We seek a data-centric Media Buyer with a solid record of driving conversions on Meta or TikTok Ads environments.',
-    responsibilities: [
-      'Establish, manage, and scale paid advertisement campaigns daily, managing significant budgets.',
-      'Conceptualize high-converting video and image ad ideas to write briefs for Designers.',
-      'Diagnose drop-offs in Shopify/TikTok Shop funnel analytics (CTR, CPM, CVR, ROAS).',
-      'Perform structured A/B tests on landing pages, product angles, and pricing structures.'
-    ],
-    requirements: [
-      'Over 1.5 years experience in performance marketing, preferably in cross-border POD/Dropshipping.',
-      'Decisive data tracking skills, comfortable diagnosing pixel and attribution discrepancies.',
-      'Strong creative logic: understands user psychology, trigger words, and visual hooks.',
-      'Highly resilient and adaptable to platform rule updates.'
-    ],
-    benefits: [
-      'Access to premium marketing tools, specialized agency analytics nodes, and high budgets.',
-      'Generous quarterly bonuses based directly on generated net margins/ROAS.',
-      'Annual premium health packages and periodic luxury resort retreats.',
-      'Structured technical learning allowances to buy advanced digital training.'
-    ]
-  },
-  {
-    id: 'product-rd',
-    title: 'Product R&D Specialist',
-    department: 'Product Development',
-    location: 'Hanoi Branch (Gems Office)',
-    type: 'Full-time',
-    salary: '$800 - $1,300',
-    description: 'We need creative, research-centered specialists to conceptualize original POD and dropshipping ideas. You compile datasets, inspect Pinterest/TikTok, and propose scalable design ideas.',
-    responsibilities: [
-      'Gather and synthesize trending design structures from Pinterest, ETSY, Redbubble, and Amazon.',
-      'Build localized creative designs concept notes for the interior design department.',
-      'Audit product feedback to discover upgrades, material ideas, or size configurations.',
-      'Liaise with fulfillment partners to verify product feasibility, print colors, and custom boxes.'
-    ],
-    requirements: [
-      'Excellent US market aesthetic empathy (understands American holidays, humor, and family values).',
-      'Proficient written English skills (IELTS 6.0+ or equivalent strongly preferred).',
-      'Highly organized, structured project logs, and spreadsheet savvy.',
-      'Prior POD research background is a massive benefit.'
-    ],
-    benefits: [
-      'Competitive base salary plus extra bonuses based on viral products found.',
-      'Interactive, youthful environment that encourages testing experimental ideas.',
-      'Comprehensive social insurance coverage (BHXH/BHYT) fully covered by the employer.',
-      'Weekly theoretical and functional training on advanced US consumer psychology.'
-    ]
-  },
-  {
-    id: 'designer-video',
-    title: 'Graphic Designer & Video Editor (Creative Team)',
-    department: 'Creative Studio',
-    location: 'Hanoi Branch (Gems Office)',
-    type: 'Full-time',
-    salary: '$750 - $1,200',
-    description: 'Produce high-converting graphical and video products that hook US social users immediately. You creates visual apparel vectors for POD and edit viral TikTok product promo ads.',
-    responsibilities: [
-      'Design attractive visual elements, vintage vectors, typography overlays for POD products.',
-      'Edit high-quality, eye-catching 15-30 second marketing ads using CapCut, Premiere, or After Effects.',
-      'Incorporate text animations, audio voiceovers, trending music, and high-impact sound cues.',
-      'Rework and modify existing templates into multi-angle options for comparative runs.'
-    ],
-    requirements: [
-      'Strong expertise in Adobe Photoshop, Illustrator, and Premiere Pro/CapCut.',
-      'Outstanding graphic and kinetic layouts sensibility (color spaces, font pairings, visual flow).',
-      'Ability to produce assets under rapid agile cycles, staying receptive to ad performance data.',
-      'Portfolio displaying clean apparel layouts or engaging advertising clips must be attached.'
-    ],
-    benefits: [
-      'A true, judgment-free creative environment where modern aesthetics are celebrated.',
-      'Top-tier hardware configurations (high-end GPUs, color-calibrated monitors, premium drawing pads).',
-      'Individual credit and additional rewards when designs cross major sales milestones.',
-      'Complimentary corporate lunch, premium snacks, and afternoon tea cycles.'
-    ]
-  },
-  {
-    id: 'customer-service',
-    title: 'Customer Experience Specialist (US Office Hours)',
-    department: 'Customer Success',
-    location: 'Hanoi Branch (Gems Office) / Remote Option',
-    type: 'Full-time',
-    salary: '$700 - $1,100',
-    description: 'Be the high-integrity face of Qnext. You manage support tickets, emails, and platform comments to ensure absolute consumer satisfaction and prevent platform disputes.',
-    responsibilities: [
-      'Respond swiftly to customer queries regarding shipping status, delivery issues, returns, and damages.',
-      'Manage dispute resolution panels inside Shopify, Stripe, PayPal, and TikTok Shop US dashboards.',
-      'Coordinate with operations teams to fast-track delayed tracking codes.',
-      'Proactively collect user feedback to write optimization reports for the R&D division.'
-    ],
-    requirements: [
-      'Outstanding written English (excellent spelling, grammar, and polite tone).',
-      'Willingness to support US-favorable shifts (options for remote early mornings or night coverage).',
-      'Patient, empathetic, high-EQ communicator capable of calming frustrated users.',
-      'Proficiency with customer service software like Zendesk, Crisp, or Gorgias is a plus.'
-    ],
-    benefits: [
-      'Flexible working conditions with dynamic shift bonuses.',
-      'Direct client-relations mentorship, building skills useful for international business lines.',
-      'Full health/social security programs, plus continuous English accent/vocab support.',
-      'Performance-based monthly bonuses for maintaining stellar store ratings.'
-    ]
-  }
-];
+export const JOB_POSITIONS: JobPosition[] = [];
 
 export const MILESTONES: Milestone[] = [
   {
@@ -295,8 +159,8 @@ export const MILESTONES: Milestone[] = [
     date: 'Summer 2026',
     title: 'TikTok Shop Team Extension Phase',
     tag: 'Corporate Growth',
-    summary: 'Tripling our creative and operational scale in Hanoi to service five brand-new US merchant nodes.',
-    detail: 'To support our rapid sales trajectory, we are expanding our physical branch scale located in Hanoi, Gems Office. We are actively inviting ambitious local professionals to join our visual team, R&D lines, and ad scale operations to collectively conquer the cross-border digital landscape.',
+    summary: 'Tripling our creative and operational scale to service five brand-new US merchant nodes.',
+    detail: 'To support our rapid sales trajectory, we are expanding our physical operations, scaling our creative infrastructure, R&D lines, and ad operations to service brand-new US merchant nodes.',
   }
 ];
 
@@ -322,14 +186,5 @@ export const OFFICES: OfficeAddress[] = [
     email: 'hq@qnextgroup.com',
     phone: '+65 6712 9011',
     coordinates: { x: 35, y: 40 }
-  },
-  {
-    country: 'Vietnam',
-    city: 'Hanoi (Operational Hub)',
-    name: 'Qnext Vietnam Branch Office',
-    address: 'Gems Office, 4 Ngõ 48 Nguyễn Chánh, Cầu Giấy, Hà Nội, Vietnam',
-    email: 'careers@qnextgroup.com',
-    phone: '+84 24 7300 6813',
-    coordinates: { x: 72, y: 68 }
   }
 ];

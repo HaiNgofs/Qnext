@@ -59,7 +59,7 @@ export default function Hero({ onLearnMore, onExploreCareers }: HeroProps) {
               onClick={onExploreCareers}
               className="flex-1 text-center py-4 px-6 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white font-bold uppercase text-xs tracking-wider rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 cursor-pointer"
             >
-              Explore Open Positions
+              Contact Us
             </button>
             <button
               id="hero-learn-btn"

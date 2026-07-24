@@ -9,7 +9,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Pillars from './components/Pillars';
 import BusinessModel from './components/BusinessModel';
-import CareerSection from './components/CareerSection';
 import Activities from './components/Activities';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -35,7 +34,7 @@ export default function App() {
 
   // Section Observer to highlight active link
   useEffect(() => {
-    const sections = ['hero', 'about', 'pillars', 'services', 'careers', 'milestones', 'contact'];
+    const sections = ['hero', 'about', 'pillars', 'services', 'milestones', 'contact'];
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 120; // offset tolerance trigger
@@ -70,7 +69,7 @@ export default function App() {
         {/* Interactive Hero section */}
         <Hero 
           onLearnMore={() => handleNavigate('about')} 
-          onExploreCareers={() => handleNavigate('careers')} 
+          onExploreCareers={() => handleNavigate('contact')} 
         />
 
         {/* Company profile and dynamic numbers */}
@@ -81,9 +80,6 @@ export default function App() {
 
         {/* Business areas: POD / Dropshipping / TikTok Shop US */}
         <BusinessModel />
-
-        {/* Career openings & Applications panel */}
-        <CareerSection />
 
         {/* Highlighted Summits & Milestones list */}
         <Activities />

@@ -15,7 +15,6 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [timeSingapore, setTimeSingapore] = useState('');
-  const [timeHanoi, setTimeHanoi] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +22,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // Update global times
+    // Update global time
     const updateTimes = () => {
       const now = new Date();
       
@@ -35,18 +34,8 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
         second: '2-digit',
         hour12: false
       }).format(now);
-      
-      // Hanoi is UTC+7
-      const hnTime = new Intl.DateTimeFormat('en-US', {
-        timeZone: 'Asia/Ho_Chi_Minh',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-      }).format(now);
 
       setTimeSingapore(sgTime);
-      setTimeHanoi(hnTime);
     };
 
     updateTimes();
@@ -62,7 +51,6 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
     { id: 'about', label: 'About' },
     { id: 'pillars', label: 'Our Pillars' },
     { id: 'services', label: 'Business Areas' },
-    { id: 'careers', label: 'Careers' },
     { id: 'milestones', label: 'Milestones' },
     { id: 'contact', label: 'Contact Office' },
   ];
@@ -129,18 +117,14 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               <span className="text-[10px] uppercase text-zinc-400">SG HQ</span>
               <span className="text-zinc-800 dark:text-zinc-200 font-medium">{timeSingapore || '00:00:00'}</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-[10px] uppercase text-zinc-400">HN HUB</span>
-              <span className="text-zinc-800 dark:text-zinc-200 font-medium">{timeHanoi || '00:00:00'}</span>
-            </div>
           </div>
           
           <button
             id="nav-apply-btn"
-            onClick={() => handleLinkClick('careers')}
+            onClick={() => handleLinkClick('contact')}
             className="flex items-center gap-1 bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 text-xs font-semibold uppercase px-4 py-2 rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors shadow-sm cursor-pointer"
           >
-            Apply Now
+            Contact Us
             <ArrowUpRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -186,10 +170,6 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               <span className="block text-[8px] uppercase">Singapore HQ</span>
               <span className="text-zinc-800 dark:text-zinc-200 font-medium">{timeSingapore || '00:00'}</span>
             </div>
-            <div>
-              <span className="block text-[8px] uppercase">Hanoi hub</span>
-              <span className="text-zinc-800 dark:text-zinc-200 font-medium">{timeHanoi || '00:00'}</span>
-            </div>
             <div className="flex items-center gap-1.5 px-2 py-1 bg-zinc-100 dark:bg-zinc-905 rounded text-zinc-650 dark:text-zinc-300 text-[10px]">
               <Globe className="w-3 h-3 text-zinc-400" />
               US Expansion Active
@@ -198,10 +178,10 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
 
           <button
             id="mobile-apply-btn"
-            onClick={() => handleLinkClick('careers')}
+            onClick={() => handleLinkClick('contact')}
             className="w-full text-center py-3 bg-zinc-950 dark:bg-white text-white dark:text-zinc-950 font-bold uppercase text-sm rounded-lg hover:bg-zinc-805 dark:hover:bg-zinc-100 transition-colors"
           >
-            Apply for positions
+            Contact Us
           </button>
         </div>
       )}

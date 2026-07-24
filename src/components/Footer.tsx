@@ -48,7 +48,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="flex gap-4 text-xs font-mono">
               <span className="flex items-center gap-1.5 text-zinc-455">
                 <Globe className="w-3.5 h-3.5 text-zinc-600" />
-                Singapore Reg &bull; Hanoi Op
+                Singapore Headquarters
               </span>
             </div>
           </div>
@@ -66,11 +66,11 @@ export default function Footer({ onNavigate }: FooterProps) {
               <button onClick={() => onNavigate('services')} className="text-left hover:text-white transition-colors cursor-pointer">
                 Business Models
               </button>
-              <button onClick={() => onNavigate('careers')} className="text-left hover:text-white transition-colors cursor-pointer">
-                Active Openings (Careers)
-              </button>
               <button onClick={() => onNavigate('milestones')} className="text-left hover:text-white transition-colors cursor-pointer">
                 Summits & Milestones
+              </button>
+              <button onClick={() => onNavigate('contact')} className="text-left hover:text-white transition-colors cursor-pointer">
+                Contact & Partners
               </button>
             </div>
           </div>
@@ -83,12 +83,6 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <span className="block text-white font-bold text-[11px] uppercase tracking-wider">Singapore (HQ)</span>
                 <span className="block text-[11px] text-zinc-500 font-mono leading-relaxed">
                   Qnext Pte. Ltd. &bull; 114 LAVENDER STREET #10-05 CT HUB 2 SINGAPORE 338729
-                </span>
-              </div>
-              <div className="space-y-1">
-                <span className="block text-white font-bold text-[11px] uppercase tracking-wider">Vietnam (Hub)</span>
-                <span className="block text-[11px] text-zinc-500 font-mono leading-relaxed">
-                  Gems Office, 4 Ngõ 48 Nguyễn Chánh, Cầu Giấy, Hà Nội, Vietnam
                 </span>
               </div>
             </div>

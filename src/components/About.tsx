@@ -9,7 +9,9 @@ import { MapPin, Globe2, Sparkles, Building2, HelpCircle, ChevronRight } from 'l
 import aboutOfficeImage from '../assets/images/about_office_1780992247265.png';
 
 export default function About() {
-  const [activeOfficeIndex, setActiveOfficeIndex] = useState(1); // Default to Hanoi hub as it is their primary operational office
+  const [activeOfficeIndex, setActiveOfficeIndex] = useState(0);
+
+  const activeOffice = OFFICES[activeOfficeIndex] || OFFICES[0];
 
   return (
     <section id="about" className="py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900">
@@ -78,23 +80,25 @@ export default function About() {
                 <Building2 className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </div>
 
-              {/* Toggle controls */}
-              <div className="flex gap-2 p-1 bg-slate-100 dark:bg-slate-950 rounded-xl mb-6 border border-slate-200/50 dark:border-slate-850">
-                {OFFICES.map((office, idx) => (
-                  <button
-                    key={office.country}
-                    id={`btn-office-${idx}`}
-                    onClick={() => setActiveOfficeIndex(idx)}
-                    className={`flex-1 text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                      activeOfficeIndex === idx
-                        ? 'bg-blue-600 dark:bg-blue-500 text-white shadow-sm'
-                        : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-300'
-                    }`}
-                  >
-                    {office.country}
-                  </button>
-                ))}
-              </div>
+              {/* Toggle controls - only render if multiple offices */}
+              {OFFICES.length > 1 && (
+                <div className="flex gap-2 p-1 bg-slate-100 dark:bg-slate-950 rounded-xl mb-6 border border-slate-200/50 dark:border-slate-850">
+                  {OFFICES.map((office, idx) => (
+                    <button
+                      key={office.country}
+                      id={`btn-office-${idx}`}
+                      onClick={() => setActiveOfficeIndex(idx)}
+                      className={`flex-1 text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                        activeOfficeIndex === idx
+                          ? 'bg-blue-600 dark:bg-blue-500 text-white shadow-sm'
+                          : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-300'
+                      }`}
+                    >
+                      {office.country}
+                    </button>
+                  ))}
+                </div>
+              )}
 
               {/* Office Details Cards */}
               <div id="office-details-panel" className="space-y-6">
@@ -105,13 +109,13 @@ export default function About() {
                     </div>
                     <div className="space-y-2">
                       <span className="inline-block text-[10px] font-mono font-bold bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded uppercase border border-blue-100 dark:border-blue-900">
-                        {OFFICES[activeOfficeIndex].city}
+                        {activeOffice.city}
                       </span>
                       <h4 className="font-sans font-bold text-base text-slate-905 dark:text-white">
-                        {OFFICES[activeOfficeIndex].name}
+                        {activeOffice.name}
                       </h4>
                       <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-sans">
-                        {OFFICES[activeOfficeIndex].address}
+                        {activeOffice.address}
                       </p>
                     </div>
                   </div>
@@ -121,31 +125,23 @@ export default function About() {
                   <div className="p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/50 dark:border-slate-850 shadow-xs">
                     <span className="block text-[8px] font-mono uppercase text-slate-400">Official Channel</span>
                     <a
-                      href={`mailto:${OFFICES[activeOfficeIndex].email}`}
+                      href={`mailto:${activeOffice.email}`}
                       className="text-xs font-semibold text-slate-800 dark:text-slate-200 hover:underline hover:text-blue-600 dark:hover:text-blue-400 block mt-1"
                     >
-                      {OFFICES[activeOfficeIndex].email}
+                      {activeOffice.email}
                     </a>
                   </div>
 
                   <div className="p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/50 dark:border-slate-850 shadow-xs">
                     <span className="block text-[8px] font-mono uppercase text-slate-400">Operational Line</span>
                     <a 
-                      href={`tel:${OFFICES[activeOfficeIndex].phone}`}
+                      href={`tel:${activeOffice.phone}`}
                       className="text-xs font-semibold text-slate-800 dark:text-slate-200 hover:underline hover:text-blue-600 dark:hover:text-blue-400 block mt-1"
                     >
-                      {OFFICES[activeOfficeIndex].phone}
+                      {activeOffice.phone}
                     </a>
                   </div>
                 </div>
-
-                {/* Additional branch context notes */}
-                {activeOfficeIndex === 1 && (
-                  <div className="p-4 bg-teal-50 dark:bg-teal-950/20 border border-teal-100 dark:border-teal-950/30 rounded-xl text-xs text-teal-800 dark:text-teal-300 shadow-xs">
-                    <strong className="block mb-0.5">Active Hanoi Recruitment:</strong>
-                    We are expanding our physical design footprint at the Gems Office. Multiple creative positions are currently welcoming local applicant screening!
-                  </div>
-                )}
               </div>
             </div>
           </div>
