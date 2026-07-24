@@ -244,8 +244,8 @@ export default function ContactSection() {
                 <div className="p-4 bg-emerald-50 dark:bg-emerald-955/20 border border-emerald-150 dark:border-emerald-900/40 rounded-xl text-xs text-emerald-805 dark:text-emerald-400 flex items-start gap-2 animate-bounce">
                   <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-505" />
                   <div>
-                    <strong className="block">Message successfully recorded locally!</strong>
-                    <span>Thank you for writing. Our communications controller will respond to your address.</span>
+                    <strong className="block">Message successfully dispatched!</strong>
+                    <span>Thank you for reaching out. Notification sent to <strong>contact.qnextglobal@gmail.com</strong>. Our team will get back to you shortly.</span>
                   </div>
                 </div>
               )}

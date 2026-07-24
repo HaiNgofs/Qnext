@@ -84,6 +84,9 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <span className="block text-[11px] text-zinc-500 font-mono leading-relaxed">
                   Qnext Pte. Ltd. &bull; 114 LAVENDER STREET #10-05 CT HUB 2 SINGAPORE 338729
                 </span>
+                <a href="mailto:contact.qnextglobal@gmail.com" className="inline-block text-[11px] text-blue-400 font-mono hover:underline pt-0.5">
+                  contact.qnextglobal@gmail.com
+                </a>
               </div>
             </div>
           </div>
