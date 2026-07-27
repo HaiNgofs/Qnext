@@ -76,9 +76,11 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           className="flex items-center gap-3 cursor-pointer group"
           onClick={() => handleLinkClick('hero')}
         >
-          <div className="w-9 h-9 bg-zinc-950 dark:bg-white flex items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-105">
-            <span className="font-sans font-extrabold text-lg text-white dark:text-zinc-950 tracking-tight">Q</span>
-          </div>
+          <img 
+            src="/logo.svg" 
+            alt="Qnext Logo" 
+            className="w-9 h-9 rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-xs"
+          />
           <div>
             <span className="font-sans font-bold text-xl tracking-tight text-zinc-950 dark:text-white transition-colors group-hover:text-zinc-700 dark:group-hover:text-zinc-300">
               Qnext

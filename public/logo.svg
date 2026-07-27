@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background Navy Squircle -->
+  <rect x="0" y="0" width="512" height="512" rx="128" fill="#14263f" />
+  
+  <!-- White Ring / Circle -->
+  <circle cx="232" cy="232" r="110" fill="none" stroke="#f0f4f8" stroke-width="48" />
+  
+  <!-- Gold Accent Pill (Tail of the Q) -->
+  <rect x="290" y="320" width="100" height="42" rx="21" fill="#d99f3d" transform="rotate(40 340 341)" />
+</svg>

@@ -30,9 +30,11 @@ export default function Footer({ onNavigate }: FooterProps) {
               className="flex items-center gap-3 cursor-pointer group w-fit"
               onClick={handleLogoClick}
             >
-              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-lg transition-transform group-hover:scale-105">
-                <span className="font-sans font-black text-xs text-zinc-950">Q</span>
-              </div>
+              <img 
+                src="/logo.svg" 
+                alt="Qnext Logo" 
+                className="w-8 h-8 rounded-lg transition-transform group-hover:scale-105"
+              />
               <div>
                 <span className="font-bold text-lg text-white tracking-tight">Qnext</span>
                 <span className="block text-[8px] uppercase tracking-widest text-zinc-500 font-mono">
